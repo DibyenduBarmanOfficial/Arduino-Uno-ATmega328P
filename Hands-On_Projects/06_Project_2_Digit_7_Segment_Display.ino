@@ -79,7 +79,7 @@ void loop() {
   digitalWrite(Display_3, LOW); // not using display3
   digitalWrite(Display_4, LOW); // not using display4
   
-  printdata(Segment_data[3]); // 0x5B
+  printdata(Segment_data[3]); // 0x4F
   digitalWrite(Display_1, HIGH);
   digitalWrite(Display_2, LOW);
   delay(5);
