@@ -1,3 +1,10 @@
+/*
+ * Author: DIBYENDU BARMAN
+ * Date: 21-June-2023
+ * Project Description: Printing a character on Serial Monitor
+ */
+ 
+ 
 char data = 'A';
 
 void setup() {
