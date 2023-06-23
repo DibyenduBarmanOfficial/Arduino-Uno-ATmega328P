@@ -21,44 +21,44 @@ unsigned char mask[8] = {0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80};
 
 void printdata(unsigned char data) {
   if ((data & mask[0]) == mask[0]) {
-    digitalWrite(D0, LOW);
-  } else {
     digitalWrite(D0, HIGH);
+  } else {
+    digitalWrite(D0, LOW);
   }
   if ((data & mask[1]) == mask[1]) {
-    digitalWrite(D1, LOW);
-  } else {
     digitalWrite(D1, HIGH);
+  } else {
+    digitalWrite(D1, LOW);
   }
   if ((data & mask[2]) == mask[2]) {
-    digitalWrite(D2, LOW);
-  } else {
     digitalWrite(D2, HIGH);
+  } else {
+    digitalWrite(D2, LOW);
   }
   if ((data & mask[3]) == mask[3]) {
-    digitalWrite(D3, LOW);
-  } else {
     digitalWrite(D3, HIGH);
+  } else {
+    digitalWrite(D3, LOW);
   }
   if ((data & mask[4]) == mask[4]) {
-    digitalWrite(D4, LOW);
-  } else {
     digitalWrite(D4, HIGH);
+  } else {
+    digitalWrite(D4, LOW);
   }
   if ((data & mask[5]) == mask[5]) {
-    digitalWrite(D5, LOW);
-  } else {
     digitalWrite(D5, HIGH);
+  } else {
+    digitalWrite(D5, LOW);
   }
   if ((data & mask[6]) == mask[6]) {
-    digitalWrite(D6, LOW);
-  } else {
     digitalWrite(D6, HIGH);
+  } else {
+    digitalWrite(D6, LOW);
   }
   if ((data & mask[7]) == mask[7]) {
-    digitalWrite(D7, LOW);
-  } else {
     digitalWrite(D7, HIGH);
+  } else {
+    digitalWrite(D7, LOW);
   }
 }
 
