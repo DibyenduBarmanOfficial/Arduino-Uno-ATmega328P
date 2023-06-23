@@ -1,7 +1,7 @@
 /*
  * Author: DIBYENDU BARMAN
  * Date: 23-June-2023
- * Project Description: 4-bit 16x2 Liquid Crystal Display // LCD Not working
+ * Project Description: 4-bit 16x2 Liquid Crystal Display
  */
 
 
