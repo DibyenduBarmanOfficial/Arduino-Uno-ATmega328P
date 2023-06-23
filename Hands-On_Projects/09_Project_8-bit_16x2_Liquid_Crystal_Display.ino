@@ -5,8 +5,18 @@
  */
 
 
-const int RS = 3, RW = 4, EN = 5, D0 = 6, D1 = 7, D2 = 8, D3 = 9, D4 = 10, D5 = 11, D6 = 12, D7 = 13;
-unsigned int i;
+const int RS = 3;
+const int RW = 4;
+const int EN = 5;
+const int D0 = 6;
+const int D1 = 7;
+const int D2 = 8;
+const int D3 = 9;
+const int D4 = 10;
+const int D5 = 11;
+const int D6 = 12;
+const int D7 = 13;
+
 unsigned char mask[8] = {0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80};
 
 void printdata(unsigned char data) {
@@ -74,6 +84,8 @@ void lcd_cmd(unsigned char cmd)
 
 void lcd_string(unsigned char str[], unsigned char num)
 {
+  unsigned int i;
+
   for(i = 0; i < num; i++)
   {
     lcd_data(str[i]);
@@ -90,16 +102,25 @@ void lcd_initialise()
 
 
 void setup() {
-  for(i = 3; i <= 13; i++)
-  {
-    pinMode(i, OUTPUT);
-  }
+  pinMode(RS, OUTPUT);
+  pinMode(RW, OUTPUT);
+  pinMode(EN, OUTPUT);
+
+  pinMode(D0, OUTPUT);
+  pinMode(D1, OUTPUT);
+  pinMode(D2, OUTPUT);
+  pinMode(D3, OUTPUT);
+  pinMode(D4, OUTPUT);
+  pinMode(D5, OUTPUT);
+  pinMode(D6, OUTPUT);
+  pinMode(D7, OUTPUT);
+  
   lcd_initialise();
 }
 
 void loop() {
   lcd_cmd(0x80); // first row first column
-  lcd_string("Dibyendu Barman", 14);
+  lcd_string("Dibyendu Barman", 15);
   lcd_cmd(0xC0); // second row first column
-  lcd_string("Arduino Uno", 10);
+  lcd_string("Arduino Uno", 11);
 }
